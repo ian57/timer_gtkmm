@@ -81,6 +81,7 @@ m_spinbutton_seconds_adj( Gtk::Adjustment::create(0.0, 0.0, 59.0, 1.0, 5.0, 0.0)
 	  m_refBuilder->get_widget("eventbox_labels", m_eventbox_labels);
 
 	  m_tick = new Sound("/home/yann/git/timer_gtkmm/timer_gtkmm/data/clock_tick.mp3");
+	  //m_alarm = new Sound("/home/yann/git/timer_gtkmm/timer_gtkmm/data/clock_tick.mp3");
 	  m_alarm = new Sound("/home/yann/git/timer_gtkmm/timer_gtkmm/data/cuckoo_clock.mp3");
 
 

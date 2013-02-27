@@ -11,14 +11,15 @@
 
 Sound::Sound(Glib::ustring filename)
 {
+	// for frequency play
 	m_pipeline = Gst::Pipeline::create("player");
 	m_source = Gst::ElementFactory::create_element("audiotestsrc", "source");
 	m_sink = Gst::ElementFactory::create_element("autoaudiosink", "output");
-	m_bin = Gst::PlayBin::create("myplayer");
-
 	m_pipeline->add(m_source);
 	m_pipeline->add(m_sink);
 	m_source->link(m_sink);
+	//for file play
+	m_bin = Gst::PlayBin::create("myplayer");
 	m_bus = m_bin->get_bus();
 	m_filetoplay = "file://" + filename;
 	m_bin->set_property("uri", m_filetoplay);
@@ -45,14 +46,14 @@ bool Sound::on_bus_message(const Glib::RefPtr<Gst::Bus> &bus, const Glib::RefPtr
 	switch(message->get_message_type())
 	{
 	case Gst::MESSAGE_EOS:
-		//std::cout << "OK\n";
-		//rewind -> use seek
+		m_bin->set_state(Gst::STATE_PAUSED);
 		m_bin->seek(Gst::FORMAT_TIME, Gst::SEEK_FLAG_FLUSH, 0);
+		m_bin->set_state(Gst::STATE_PLAYING);
 		break;
 	default:
 		break;
 	}
-	m_pipeline->set_state(Gst::STATE_NULL);
+
 	return true;
 
 }
@@ -87,7 +88,9 @@ void Sound::play_file_looped()
 
 void Sound::play_file()
 {
-	m_bin->set_state(Gst::STATE_NULL); //need to replay the file if same
+	//m_bin->set_state(Gst::STATE_NULL); //need to replay the file if same
+	m_bin->set_state(Gst::STATE_PAUSED);
+	m_bin->seek(Gst::FORMAT_TIME, Gst::SEEK_FLAG_FLUSH, 0);
 	m_bin->set_state(Gst::STATE_PLAYING);
 }
 
