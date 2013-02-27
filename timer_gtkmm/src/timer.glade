@@ -163,7 +163,7 @@
                   <object class="GtkLabel" id="label_remaining_seconds">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes"> Remaining_seconds</property>
+                    <property name="label" translatable="yes"> Remaining Seconds</property>
                   </object>
                   <packing>
                     <property name="expand">True</property>
