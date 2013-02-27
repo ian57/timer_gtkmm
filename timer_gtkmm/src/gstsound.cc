@@ -46,9 +46,9 @@ bool Sound::on_bus_message(const Glib::RefPtr<Gst::Bus> &bus, const Glib::RefPtr
 	switch(message->get_message_type())
 	{
 	case Gst::MESSAGE_EOS:
-		m_bin->set_state(Gst::STATE_PAUSED);
-		m_bin->seek(Gst::FORMAT_TIME, Gst::SEEK_FLAG_FLUSH, 0);
-		m_bin->set_state(Gst::STATE_PLAYING);
+		m_bin->set_state(Gst::STATE_PAUSED); //pause
+		m_bin->seek(Gst::FORMAT_TIME, Gst::SEEK_FLAG_FLUSH, 0); //rewind
+		m_bin->set_state(Gst::STATE_PLAYING); //play
 		break;
 	default:
 		break;
@@ -89,9 +89,9 @@ void Sound::play_file_looped()
 void Sound::play_file()
 {
 	//m_bin->set_state(Gst::STATE_NULL); //need to replay the file if same
-	m_bin->set_state(Gst::STATE_PAUSED);
-	m_bin->seek(Gst::FORMAT_TIME, Gst::SEEK_FLAG_FLUSH, 0);
-	m_bin->set_state(Gst::STATE_PLAYING);
+	m_bin->set_state(Gst::STATE_PAUSED); //pause
+	m_bin->seek(Gst::FORMAT_TIME, Gst::SEEK_FLAG_FLUSH, 0); //rewind
+	m_bin->set_state(Gst::STATE_PLAYING); //play
 }
 
 void Sound::stop_file()

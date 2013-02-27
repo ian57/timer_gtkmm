@@ -81,7 +81,6 @@ m_spinbutton_seconds_adj( Gtk::Adjustment::create(0.0, 0.0, 59.0, 1.0, 5.0, 0.0)
 	  m_refBuilder->get_widget("eventbox_labels", m_eventbox_labels);
 
 	  m_tick = new Sound("/home/yann/git/timer_gtkmm/timer_gtkmm/data/clock_tick.mp3");
-	  //m_alarm = new Sound("/home/yann/git/timer_gtkmm/timer_gtkmm/data/clock_tick.mp3");
 	  m_alarm = new Sound("/home/yann/git/timer_gtkmm/timer_gtkmm/data/cuckoo_clock.mp3");
 
 
@@ -96,7 +95,6 @@ bool Timer::on_window_timer_destroy_cb(GdkEventAny * event)
 
 void Timer::on_Button_Timer_Start_release_cb()
 {
-
 	std::cout << "Hello on_Button_Timer_Start_release_cb" << std::endl;
 	m_hours = m_spinbutton_hours->get_value();
 	m_minutes = m_spinbutton_minutes->get_value();
