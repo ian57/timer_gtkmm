@@ -10,6 +10,8 @@
 #include "Timer.h"
 #include <iomanip>
 
+//#include <glibmm.h>
+
 using namespace std;
 
 Timer::Timer() :
@@ -22,7 +24,7 @@ m_spinbutton_seconds_adj( Gtk::Adjustment::create(0.0, 0.0, 59.0, 1.0, 5.0, 0.0)
 	  m_refBuilder = Gtk::Builder::create();
 	  try
 	  {
-	    m_refBuilder->add_from_file("../src/timer.glade");
+	    m_refBuilder->add_from_file(Glib::ustring("../src/timer.glade"));
 	  }
 	  catch(const Glib::FileError& ex)
 	  {

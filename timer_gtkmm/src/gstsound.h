@@ -9,11 +9,12 @@
 #define GSTSOUND_H_
 
 #include <gstreamermm.h>
+using namespace std;
 
 class Sound
 {
 	public:
-		Sound(std::string filename);
+		Sound(Glib::ustring filename);
 
 		void start_playing_frequency(double frequency);
 		bool stop_playing();
@@ -31,7 +32,7 @@ class Sound
 		Glib::RefPtr<Gst::Element> m_sink;
 		Glib::RefPtr<Gst::PlayBin> m_bin;
 		Glib::RefPtr<Gst::Bus> m_bus;
-		std::string m_filetoplay;
+		Glib::ustring m_filetoplay;
 		sigc::connection m_connection_id_timeout;
 };
 

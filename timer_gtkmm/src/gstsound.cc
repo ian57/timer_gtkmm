@@ -8,7 +8,8 @@
 #include "gstsound.h"
 #include <iomanip>
 
-Sound::Sound(std::string filename)
+
+Sound::Sound(Glib::ustring filename)
 {
 	m_pipeline = Gst::Pipeline::create("player");
 	m_source = Gst::ElementFactory::create_element("audiotestsrc", "source");
