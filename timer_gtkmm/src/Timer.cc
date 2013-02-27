@@ -22,7 +22,7 @@ m_spinbutton_seconds_adj( Gtk::Adjustment::create(0.0, 0.0, 59.0, 1.0, 5.0, 0.0)
 	  m_refBuilder = Gtk::Builder::create();
 	  try
 	  {
-	    m_refBuilder->add_from_file("/home/yann/gtk_workspace/timer_gtkmm/src/timer.glade");
+	    m_refBuilder->add_from_file("../src/timer.glade");
 	  }
 	  catch(const Glib::FileError& ex)
 	  {
@@ -78,8 +78,8 @@ m_spinbutton_seconds_adj( Gtk::Adjustment::create(0.0, 0.0, 59.0, 1.0, 5.0, 0.0)
 	  m_refBuilder->get_widget("label_remain_seconds_value", m_label_seconds);
 	  m_refBuilder->get_widget("eventbox_labels", m_eventbox_labels);
 
-	  m_tick = new Sound("/home/yann/gtk_workspace/timer_gtkmm/data/clock_tick.mp3");
-	  m_alarm = new Sound("/home/yann/gtk_workspace/timer_gtkmm/data/cuckoo_clock.mp3");
+	  m_tick = new Sound("/home/yann/git/timer_gtkmm/timer_gtkmm/data/clock_tick.mp3");
+	  m_alarm = new Sound("/home/yann/git/timer_gtkmm/timer_gtkmm/data/cuckoo_clock.mp3");
 
 
 }
