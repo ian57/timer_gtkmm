@@ -143,10 +143,11 @@
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="cairo-gobject"/>
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="pango-1.0"/>
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="cairo"/>
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="glibmm-2.4"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="gio-2.0"/>
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="gobject-2.0"/>
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="sigc-2.0"/>
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="glib-2.0"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="glibmm-2.4"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="sigc-2.0"/>
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="gstreamermm-0.10"/>
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="giomm-2.4"/>
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="xml++-2.6"/>
@@ -158,7 +159,6 @@
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="gstnetbuffer-0.10"/>
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="gstrtp-0.10"/>
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="gstvideo-0.10"/>
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="gio-2.0"/>
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="gstinterfaces-0.10"/>
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="gsttag-0.10"/>
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="gstbase-0.10"/>

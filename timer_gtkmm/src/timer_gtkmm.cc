@@ -20,6 +20,7 @@ int main (int argc, char *argv[])
 	  Gtk::Window * win = timer.GetMainWindow();
 	  //Shows the window and returns when it is closed.
 	  Gtk::Main::run((*win));
+	  return 0;
 }
 
 
